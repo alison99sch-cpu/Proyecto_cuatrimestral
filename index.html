@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali's nails</title>
    <link rel="shortcut icon" href="Imagenes\icono\icon-icons (1).svg" type="image/svg">
+   <link rel="stylesheet" href="style.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header id="inicio">
@@ -38,8 +48,8 @@
             <h2>Esmaltado semipermanente:</h2>
             <p>El esmaltado semipermanente es una técnica de manicura que utiliza esmaltes especiales que se curan bajo una lámpara UV o LED, proporcionando un acabado duradero y brillante que puede durar hasta dos semanas sin descascararse.</p>
             <h3>Materiales necesarios para realizar esta tecnica:</h3>
-            <ul>
-                <li>Lima suave (nº 180, 220, 240 y superiores)</li>
+            <ul class="lista">
+                <li>Lima suave (nº 220, 240 y superiores)</li>
                 <li>Esmalte semipermanente</li>
                 <li>Base</li>
                 <li>Top coat</li>
@@ -48,7 +58,7 @@
 
             </ul>
             <h3>Extras (que pueden ser útiles):</h3>
-            <ul>
+            <ul class="lista">
                 <li>Saca cuticulas (solo si es necesario o de tu preferencia)</li>
                 <li>Palito de naranjo</li>
                 <li>Algodón o toallitas para uñas</li>
@@ -57,8 +67,8 @@
            </section>
            <br><br>
 
-           <section id="paso_1">
-            <h2>Paso 1: Preparación</h2>
+           <section id="paso_1" class="pasos">
+            <h2 class="tit_pas">Paso 1: Preparación</h2>
             <p>En este paso, se limpian las uñas con agua y jabón, alcohol en gel o espuma de limpieza y se prepara la superficie para la aplicación del esmalte con la ayuda de la lima. Ademas, quitamos las cutículas de serlo necesario.</p>
             <br>
             <p>Es importante tener en cuenta que <strong>no hay que limar en demasia la superficie de la uña para no debilitarla</strong>. Además, hay que asegurarse de que las uñas estén completamente libres de polvo, limpias y secas antes de continuar con los siguientes pasos.</p>
@@ -66,24 +76,24 @@
            </section>
            <br><br>
 
-              <section id="paso_2">
-                <h2>Paso 2: Colocación de la base</h2>
+              <section id="paso_2" class="pasos">
+                <h2 class="tit_pas">Paso 2: Colocación de la base</h2>
                 <p>En este paso, se aplica una capa de base sobre las uñas limpias y preparadas. La base ayuda a proteger las uñas naturales, mejora la adherencia del esmalte semipermanente y prolonga la duración del esmalte.</p>
                 <br>
                 <p>Después de aplicar la base, se cura bajo la lámpara UV o LED durante el tiempo recomendado por el fabricante, generalmente entre 30 segundos y 1 minuto, dependiendo del tipo de lámpara utilizada.</p>
                 </section>
                 <br><br>
 
-                <section id="paso_3">
-                    <h2>Paso 3: Aplicación del color</h2>
+                <section id="paso_3" class="pasos">
+                    <h2 class="tit_pas">Paso 3: Aplicación del color</h2>
                     <p>En este paso, se aplica el esmalte semipermanente en capas finas y uniformes. Es recomendable aplicar dos capas de color para obtener un acabado más intenso y duradero. Sobretodo si se trata de colores fuertes o muy claros como el rojo, negro o blanco.</p>
                     <br>
                     <p>Después de cada capa de color, se cura bajo la lámpara UV o LED durante el tiempo recomendado por el fabricante. Es importante asegurarse de que <strong>cada capa esté completamente seca</strong> antes de aplicar la siguiente para evitar burbujas o imperfecciones en el acabado final. Para colores como los antes mencionados, suele ser útil dejar que cada capa colocada este al menos 60 segundos en la cabina o lampara.</p>
                 </section>
                 <br><br>
 
-                <section id="paso_4">
-                    <h2>Paso 4 (Último paso): Top coat</h2>
+                <section id="paso_4" class="pasos">
+                    <h2 class="tit_pas">Paso 4 (Último paso): Top coat</h2>
                     <p>En este paso, se aplica una capa de top coat sobre el esmalte semipermanente para protegerlo y darle un acabado brillante y duradero. Además, un extra que nos da el top coat, es que puede ayudar a cubrir visualmente algunas imperfecciones que pudieran quedar al colocar el color.</p>
                 </section>
                 <br><br>
@@ -184,7 +194,7 @@
             </main>
 
             <footer>
-            <a href="#inicio"><img src="Imagenes/icono/inicio.svg" alt="Volver al inicio" height="95" width="95"></a> <!--Esta imagen tiene un link que lleva al inicio de la página-->
+            <a href="#inicio" id="btn_inicio"><img src="Imagenes/icono/inicio.svg" alt="Volver al inicio" height="95" width="95"></a> <!--Esta imagen tiene un link que lleva al inicio de la página-->
 
                 <section>
                 <h3>Mis redes sociales:</h3>
