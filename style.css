@@ -1,9 +1,9 @@
 :root{
-    --color-primario: rgb(252, 218, 241);
+    --color-primario: rgb(252, 221, 247);
     --color-secundario: rgb(209, 157, 207);
-    --color-contraste1: rgb(61, 16, 24);
+    --color-contraste1: rgb(131, 49, 120);
     --color-contraste2: rgb(35, 26, 39);
-    --color-contraste3:  rgb(81, 145, 150);
+    --color-contraste3:  rgb(62, 117, 121);
     }
 
 body {
@@ -11,15 +11,20 @@ body {
     font-family: "IBM Plex Serif", serif;
 }
 
+/* Encabezado */
+
 header {
+    background-image: url('Imagenes/fondo_header.jpg');
     background-color: var(--color-contraste1);
-    color: var(--color-primario);
+    background-position: 40% 45%;
+   background-size: cover;
+   background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding: 0 20px;           /* importante agregar */
-    height: 70px;              
+    padding: 0 20px;           
+    height: 399px;              
 }
 
 .nav-inicio {
@@ -27,8 +32,7 @@ header {
     align-items: center;
     padding: 15px 0;
     position: relative;
-    background-color: var(--color-secundario);
-    color: var(--color-primario);
+    color: bold var(--color-terciario);
     gap: 25px;
 }
 
@@ -48,19 +52,19 @@ header {
 
 
 
-/* Estilo para la main: */
+
 .im-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
+    margin-top: 5px;
     padding: 15px;
   
 }
 
 
-
+/* Sección de contenido */
 
 
 
@@ -99,8 +103,6 @@ h1{
     font-size: 100px;
     text-align: center;
     width: 500px;
-    border: 5px dotted var(--color-contraste1);
-    border-radius: 50px;
     display: flex;    
     justify-content: center;
     margin: 50px auto;
