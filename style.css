@@ -16,14 +16,26 @@ body {
         padding: 0;
 }
 
-/* Encabezado */
+/* ENCABEZADO: */
+.menu {
+display: none;
+}
+.hamburg {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 60px;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
 
 header {
     background-image: url('Imagenes/fondo_header.jpg');
     background-color: var(--color-contraste1);
     background-position: 40% 45%;
-   background-size: cover;
-   background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,8 +92,6 @@ header:hover  {
 }
 
 
-/*Parte principal:*/
-
 /*Estilización del título principal:*/
 h1 { 
     font-family: 'Festive', cursive;
@@ -118,7 +128,7 @@ h1 {
 }
 
 
-/* Sección de contenido */
+/* SECCIÓN DE CONTENIDO: */
 
 /* Grid para la sección de tutorial:*/
 .tutorial {
@@ -266,19 +276,27 @@ h1 {
     padding: 20px;
     border: 8px  dashed var(--color-contraste3);
     border-radius: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 400px;
+   
+}
+.btn-contac {
+    padding: 12px 24px;
+    background-color: var(--color-primario);
+    transition: all 0.3s ease;
+    display: inline-block;
+
 }
 
-.btn-contact:hover {
+.btn-contac:hover {
     cursor: pointer;
     transform: scale(1.05);
-    transition:ease;
    
 }
 
 
-/* Pie de página: */
+/* PIE DE PÁGINA: */
 footer {
     background-color: var(--color-contraste1);
     color: var(--color-primario);
@@ -314,6 +332,107 @@ footer {
     transform: scale(1.1);
     transition: ease;
 }
+
+/*MEDIA QUERIES:*/
+
+/*Para tablets:*/
+ @media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    }
+
+
+  header {
+    width: 100%;
+    font-size: 5px;
+    height: 200px;
+    background-position: 40% 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0;
+  }
+
+  .nav-inicio {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  h1 {
+    font-size: 50px;
+    border-width: 5px;
+    margin-left: 0;
+    height: 110px;
+    width: 199px;
+    text-align: center;
+    align-items: center;
+    margin-left: 50px;
+    }
+
+    .principal {
+        height: 300px;
+        width: 600px;
+    }
+
+     .img-principal {
+        width: 900px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .tuto-info {
+        height: 490px;
+        width: 500px;
+        margin-right: 110px;
+        margin-bottom: 5px;
+        padding: 3px;
+    }
+
+    .tuto-img {
+        height: 300px;
+        width: 200px;
+    }
+
+    .recordar {
+        align-items: center;
+        text-align: center;
+        height: 300px ;
+        width: 400px;
+    }
+
+    .video {
+        height: 400px;
+        margin-bottom: 2px;
+       
+    }
+    /*Para acomodar tamaño de video:*/
+    iframe {
+        height: 300px;
+        width: 550px;
+        margin-bottom: 2px;
+        }
+
+    .contacto {
+        height: 300px;
+        padding-top: 10px;
+        overflow: hidden;
+        padding: 0px;
+        display: flex;
+      
+    }
+
+
+ 
+}
+
+
 
 
 /*DISEÑO FORMULARIO:*/
