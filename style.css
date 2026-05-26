@@ -14,22 +14,10 @@ body {
     font-family: "IBM Plex Serif", serif;
         margin: 0;
         padding: 0;
-}
-
-/* ENCABEZADO: */
-.menu {
-display: none;
-}
-.hamburg {
-    display: flex;
-    flex-direction: column;
-    width: 50px;
-    height: 60px;
-    justify-content: space-between;
-    cursor: pointer;
     
 }
 
+/* ENCABEZADO: */
 header {
     background-image: url('Imagenes/fondo_header.jpg');
     background-color: var(--color-contraste1);
@@ -47,6 +35,15 @@ header {
 header:hover  {
     
     transition: ease;
+}
+
+/* Ocultar elementos del menú hamburguesa: */
+.menu-ham {
+    display: none;
+}
+
+.label-ham {
+    display: none;
 }
 
 /* Estilos para enlaces del menú:*/
@@ -335,18 +332,21 @@ footer {
 
 /*MEDIA QUERIES:*/
 
-/*Para tablets:*/
+
+
+/*Para tablets (VERTICAL):*/
  @media screen and (max-width: 768px) {
   body {
-    font-size: 12px;
+    font-size: 12px; 
+    width: 100%;          
+    margin: 0;        
     padding: 0;
-    margin: 0;
-    width: 100%;
+    overflow-x: hidden;
     }
 
 
   header {
-    width: 100%;
+    width: 1030px;
     font-size: 5px;
     height: 200px;
     background-position: 40% 45%;
@@ -359,11 +359,62 @@ footer {
     margin: 0;
   }
 
-  .nav-inicio {
-    display: flex;
+  /*MENÚ HAMBURGUESA:*/
+  
+/*Icono menú hamburguesa:*/
+  .label-ham {
+    display:flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+    width: 90px;
+    height: 10px;
+    cursor: pointer;
+  
   }
 
+  .label-ham span {
+    display: block;
+    background-color: var(--color-contraste2);
+    height: 4px;
+    position: absolute;
+    width: 20px;
+    
+  }
+ 
+  /*Posiciones de las lineas del icono:*/
+.label-ham span:nth-child(1) { top: 3px; }     /* Línea de arriba */
+.label-ham span:nth-child(2) { top: 11px; }    /* Línea del medio */
+.label-ham span:nth-child(3) { top: 19px; }   /* Línea de abajo */
+ 
+
+/*Lista desplegable del menú:*/
+  .nav-inicio {
+    display: none;
+    flex-direction: column;
+    box-shadow: 0px 0px 0px 0px  1000px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-inicio ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 160px;
+    background-color: var(--color-contraste1);
+    transition: all 0.3s ease;
+    margin-left: 3px;
+    margin-right: 1000px;
+    padding: 20px;
+  }
+
+  .nav-inicio a:hover {
+    background-color: var(--color-primario);
+    transition: ease;
+  }
+
+  /*Cuando se toca el icono (checkbox marcado) aparece la lista desplegable:*/
+  .menu-ham:checked ~ .nav-inicio {
+    display: block;
+  }    
 
   h1 {
     font-size: 50px;
@@ -373,18 +424,21 @@ footer {
     width: 199px;
     text-align: center;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 90px;
     }
 
     .principal {
         height: 300px;
         width: 600px;
+        margin-left: 0px;
+
     }
 
      .img-principal {
         width: 900px;
         height: 300px;
         object-fit: cover;
+        margin: 0;
     }
 
     .tuto-info {
@@ -428,15 +482,131 @@ footer {
       
     }
 
-
+   footer {
+    width: 1030px;
+    margin-left: 0px;
+    margin-right: 0px;
+    gap: 50px;
+   }
  
 }
 
+/*Para tablets (HORIZONTAL):*/
+@media screen and (max-width: 1024px) {
+     body {
+    font-size: 12px; 
+    width: 100%;          
+    margin: 0;        
+    padding: 0;
+    overflow-x: hidden;
+    }
+
+
+  header {
+    width: 1030px;
+    height: 90px;
+    font-size: 5px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0;
+  }
+
+  
+
+
+  h1 {
+    font-size: 50px;
+    border-width: 5px;
+    margin-left: 0;
+    height: 110px;
+    width: 199px;
+    text-align: center;
+    align-items: center;
+    margin-left: 90px;
+    }
+
+    .principal {
+        height: 300px;
+        width: 600px;
+        margin-left: 0px;
+
+    }
+
+     .img-principal {
+        width: 900px;
+        height: 300px;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .tuto-info {
+        height: 490px;
+        width: 500px;
+        margin-right: 110px;
+        margin-bottom: 5px;
+        padding: 3px;
+    }
+
+    .tuto-img {
+        height: 300px;
+        width: 200px;
+    }
+
+    .recordar {
+        align-items: center;
+        text-align: center;
+        height: 300px ;
+        width: 400px;
+    }
+
+    .video {
+        height: 400px;
+        margin-bottom: 2px;
+        margin-left: 0px;
+       
+    }
+    /*Para acomodar tamaño de video:*/
+    iframe {
+        height: 300px;
+        width: 550px;
+        margin-bottom: 2px;
+        }
+
+    .contacto {
+        height: 315px;
+        width: 200px;
+        padding-top: 10px;
+        overflow: hidden;
+        padding: 0px;
+        display: flex;
+        margin-left: 30px;
+      
+    }
+
+    .contacto h2 {
+        margin-left: 0px;
+    }
+
+    .contacto h3 {
+        margin-left: 0px;
+    }
+
+   footer {
+    width: 1030px;
+    height: 95px;
+    margin-left: 0px;
+    margin-right: 0px;
+    gap: 50px;
+   }
+  
+  }
 
 
 
-/*DISEÑO FORMULARIO:*/
-.body-form {
-    background-color: rgb(171, 147, 226);
-}
+
 
