@@ -515,7 +515,62 @@ footer {
     position: relative;
     margin: 0;
   }
+/*MENÚ HAMBURGUESA:*/
+  
+/*Icono menú hamburguesa:*/
+  .label-ham {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+    width: 90px;
+    height: 10px;
+    cursor: pointer;
+  
+  }
 
+  .label-ham span {
+    display: block;
+    background-color: var(--color-contraste2);
+    height: 4px;
+    position: absolute;
+    width: 20px;
+    
+  }
+ 
+  /*Posiciones de las lineas del icono:*/
+.label-ham span:nth-child(1) { top: 3px; }     /* Línea de arriba */
+.label-ham span:nth-child(2) { top: 11px; }    /* Línea del medio */
+.label-ham span:nth-child(3) { top: 19px; }   /* Línea de abajo */
+ 
+
+/*Lista desplegable del menú:*/
+  .nav-inicio {
+    display: none;
+    flex-direction: column;
+    box-shadow: 0px 0px 0px 0px  1000px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-inicio ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 160px;
+    background-color: var(--color-contraste1);
+    transition: all 0.3s ease;
+    margin-left: 3px;
+    margin-right: 1000px;
+    padding: 20px;
+  }
+
+  .nav-inicio a:hover {
+    background-color: var(--color-primario);
+    transition: ease;
+  }
+
+  /*Cuando se toca el icono (checkbox marcado) aparece la lista desplegable:*/
+  .menu-ham:checked ~ .nav-inicio {
+    display: block;
+  }    
   
 
 
@@ -606,7 +661,360 @@ footer {
   
   }
 
+  /*Celulares pequeños:*/
+  @media screen and (max-width: 480px) {
+    body {
+        font-size: 11px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
 
+    header {
+        width: 100%;
+        height: 150px;
+        font-size: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 0;
+    }
 
+    .recordar {
+        align-items: center;
+        text-align: center;
+        height: 300px ;
+        width: 100%;
+    }
 
+    iframe {
+        width: 100%;
+    }
 
+     h1 {
+        font-size: 30px;
+        border-width: 5px;
+        margin-left: 0;
+        height: 110px;
+        width: 199px;
+        text-align: center;
+        align-items: center;
+        margin-left: 90px;
+     }
+
+     .tips {
+        flex-direction: column;
+        align-items: center;
+     }
+
+     .guia {
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+     }
+
+     .nav-inicio ul {
+        margin-top: 150px;
+     }
+
+}
+
+/*Celulares pequeños (HORIZONTAL):*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 11px;
+    }
+    header {
+        width: 100%;
+        height: 150px;
+        font-size: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 0;
+    }
+
+    iframe {
+      height: 200px;
+    }
+
+     h1 {
+        font-size: 30px;
+        border-width: 3px;
+        width: 150px;
+        height: 80px;
+     }
+
+     .tips {
+        flex-direction: column;
+        align-items: center;
+     }
+
+     .guia {
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+     }
+
+     .nav-inicio ul {
+        margin-top: 150px;
+     }
+
+     .principal h2{
+        font-size: 10px;
+        margin-left: 0px;
+        margin-right: 400px;
+     }
+
+     .img-principal {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin: 0;
+     }
+
+    }
+
+ /*Celulares ultra pequeños:*/
+ @media screen and (max-width: 320px) {
+    body {
+        BACKGROUND-COLOR: var(--color-contraste1);
+        font-size: 50px;
+    }
+    header {
+        width: 100%;
+        height: 150px;
+        font-size: 5px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 0;
+    }
+
+    iframe {
+      height: 200px;
+    }
+
+     h1 {
+        font-size: 20px;
+        border-width: 3px;
+        width: 150px;
+        height: 80px;
+     }
+
+     .tips {
+        flex-direction: column;
+        align-items: center;
+     }
+
+     .guia {
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+     }
+
+     .nav-inicio ul {
+        margin-top: 150px;
+     }
+
+     .principal h2{
+        font-size: 10px;
+        margin-left: 0px;
+        margin-right: 400px;
+     }
+
+     .img-principal {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin: 0;
+     }
+
+    }
+
+    /*Celulares ultra pequeños(HORIZONTAL):*/
+    @media screen and (min-width: 321px) and (max-width: 480px) {
+        body {
+            font-size: 10px;
+        }
+        header {
+            width: 100%;
+            height: 150px;
+            font-size: 5px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin: 0;
+        }
+
+        iframe {
+          height: 200px;
+        }
+
+         h1 {
+            font-size: 20px;
+            border-width: 3px;
+            width: 150px;
+            height: 80px;
+         }
+
+         .tips {
+            flex-direction: column;
+            align-items: center;
+         }
+
+         .guia {
+            flex-direction: column;
+            align-items: center;
+            width: 500px;
+         }
+
+         .nav-inicio ul {
+            margin-top: 150px;
+         }
+
+         .principal h2{
+            font-size: 10px;
+            margin-left: 0px;
+            margin-right: 400px;
+         }
+
+         .img-principal {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin: 0;
+         }
+
+        }
+
+        /*Celulares grandes:*/
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            body {
+                font-size: 11px;
+            }
+            header {
+                width: 100%;
+                height: 150px;
+                font-size: 5px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                margin: 0;
+            }
+
+            iframe {
+              height: 200px;
+            }
+
+             h1 {
+                font-size: 30px;
+                border-width: 3px;
+                width: 150px;
+                height: 80px;
+             }
+
+             .tips {
+                flex-direction: column;
+                align-items: center;
+             }
+
+             .guia {
+                flex-direction: column;
+                align-items: center;
+                width: 500px;
+             }
+
+             .nav-inicio ul {
+                margin-top: 150px;
+             }
+
+             .principal h2{
+                font-size: 10px;
+                margin-left: 0px;
+                margin-right: 400px;
+             }
+
+             .img-principal {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                margin: 0;
+             }
+
+            }
+
+            /*Celulares grandes (HORIZONTAL):*/
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+                body {
+                    font-size: 11px;
+                }
+                header {
+                    width: 100%;
+                    height: 150px;
+                    font-size: 5px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    margin: 0;
+                }
+
+                iframe {
+                  height: 200px;
+                }
+
+                 h1 {
+                    font-size: 30px;
+                    border-width: 3px;
+                    width: 150px;
+                    height: 80px;
+                 }
+
+                 .tips {
+                    flex-direction: column;
+                    align-items: center;
+                 }
+
+                 .guia {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 500px;
+                 }
+
+                 .nav-inicio ul {
+                    margin-top: 150px;
+                 }
+
+                 .principal h2{
+                    font-size: 10px;
+                    margin-left: 0px;
+                    margin-right: 400px;
+                 }
+
+                 .img-principal {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    margin: 0;
+                 }
+
+                }
