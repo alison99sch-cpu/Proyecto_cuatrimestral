@@ -15,7 +15,31 @@ además de brindar consejos para un mejor resultado. Es un sitio pensado para re
 - Además, presenta enlaces a mis redes sociales (instagram y canal de youtube).
 
 
-
 ## Autor
 Schneeberger Alison
 
+
+## Capturas del proceso de diseño:
+
+![Diseño piloto del menú](Imagenes/capturas_diseño/1er_diseño_menú_2026-05-15.png)
+
+![Boceto inicial de las secciones del tutorial](Imagenes/capturas_diseño/1er_diseño_secciones_del_tutorial_2026-05-17.png)
+
+![Primer diseño de la tabla](Imagenes/capturas_diseño/1er_diseño_tabla_2026-05-17.png)
+
+![Interfaz inicial de la página de formulario](Imagenes/capturas_diseño/1er_diseño_formulario_2026-05-17.png)
+
+
+## Capturas del diseño final:
+
+## MENÚ
+![Menú](Imagenes/capturas_diseño/Diseño_final_menú_2026-05-28.png)
+
+## SECCIÓNES TUTORIAL
+![Secciones del tutorial](Imagenes/capturas_diseño/Diseño_final_tutorial_2026-05-28.png)
+
+## TABLA
+![Tabla](Imagenes/capturas_diseño/Diseño_final_tabla_2026-05-17.png)
+
+## PÁGINA FORMULARIO
+![Formulario](Imagenes/capturas_diseño/Diseño_final_formulario_2026-05-28.png)

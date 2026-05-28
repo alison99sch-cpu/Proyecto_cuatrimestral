@@ -330,9 +330,8 @@ footer {
     transition: ease;
 }
 
+
 /*MEDIA QUERIES:*/
-
-
 
 /*Para tablets (VERTICAL):*/
  @media screen and (max-width: 768px) {
@@ -517,7 +516,6 @@ footer {
   }
 /*MENÚ HAMBURGUESA:*/
   
-/*Icono menú hamburguesa:*/
   .label-ham {
     display:flex;
     flex-direction: column;
@@ -538,13 +536,13 @@ footer {
     
   }
  
-  /*Posiciones de las lineas del icono:*/
-.label-ham span:nth-child(1) { top: 3px; }     /* Línea de arriba */
-.label-ham span:nth-child(2) { top: 11px; }    /* Línea del medio */
-.label-ham span:nth-child(3) { top: 19px; }   /* Línea de abajo */
+ 
+.label-ham span:nth-child(1) { top: 3px; }     
+.label-ham span:nth-child(2) { top: 11px; }    
+.label-ham span:nth-child(3) { top: 19px; }   
  
 
-/*Lista desplegable del menú:*/
+
   .nav-inicio {
     display: none;
     flex-direction: column;
@@ -567,7 +565,7 @@ footer {
     transition: ease;
   }
 
-  /*Cuando se toca el icono (checkbox marcado) aparece la lista desplegable:*/
+  
   .menu-ham:checked ~ .nav-inicio {
     display: block;
   }    
@@ -782,124 +780,7 @@ footer {
 
     }
 
- /*Celulares ultra pequeños:*/
- @media screen and (max-width: 320px) {
-    body {
-        BACKGROUND-COLOR: var(--color-contraste1);
-        font-size: 50px;
-    }
-    header {
-        width: 100%;
-        height: 150px;
-        font-size: 5px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        margin: 0;
-    }
 
-    iframe {
-      height: 200px;
-    }
-
-     h1 {
-        font-size: 20px;
-        border-width: 3px;
-        width: 150px;
-        height: 80px;
-     }
-
-     .tips {
-        flex-direction: column;
-        align-items: center;
-     }
-
-     .guia {
-        flex-direction: column;
-        align-items: center;
-        width: 500px;
-     }
-
-     .nav-inicio ul {
-        margin-top: 150px;
-     }
-
-     .principal h2{
-        font-size: 10px;
-        margin-left: 0px;
-        margin-right: 400px;
-     }
-
-     .img-principal {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        margin: 0;
-     }
-
-    }
-
-    /*Celulares ultra pequeños(HORIZONTAL):*/
-    @media screen and (min-width: 321px) and (max-width: 480px) {
-        body {
-            font-size: 10px;
-        }
-        header {
-            width: 100%;
-            height: 150px;
-            font-size: 5px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            margin: 0;
-        }
-
-        iframe {
-          height: 200px;
-        }
-
-         h1 {
-            font-size: 20px;
-            border-width: 3px;
-            width: 150px;
-            height: 80px;
-         }
-
-         .tips {
-            flex-direction: column;
-            align-items: center;
-         }
-
-         .guia {
-            flex-direction: column;
-            align-items: center;
-            width: 500px;
-         }
-
-         .nav-inicio ul {
-            margin-top: 150px;
-         }
-
-         .principal h2{
-            font-size: 10px;
-            margin-left: 0px;
-            margin-right: 400px;
-         }
-
-         .img-principal {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            margin: 0;
-         }
-
-        }
 
         /*Celulares grandes:*/
         @media screen and (min-width: 481px) and (max-width: 768px) {
