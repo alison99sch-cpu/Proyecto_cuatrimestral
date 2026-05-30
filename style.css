@@ -514,7 +514,6 @@ footer {
     position: relative;
     margin: 0;
   }
-/*MENÚ HAMBURGUESA:*/
   
   .label-ham {
     display:flex;
@@ -537,9 +536,9 @@ footer {
   }
  
  
-.label-ham span:nth-child(1) { top: 3px; }     
-.label-ham span:nth-child(2) { top: 11px; }    
-.label-ham span:nth-child(3) { top: 19px; }   
+.label-ham span:nth-child(1) { top: 4px; }     
+.label-ham span:nth-child(2) { top: 13px; }    
+.label-ham span:nth-child(3) { top: 20px; }   
  
 
 
