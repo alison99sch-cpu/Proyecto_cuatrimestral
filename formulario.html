@@ -6,7 +6,7 @@
     <title>SOS uñas</title>
     <link rel="shortcut icon" href="Imagenes/icono/preguntas.svg" type="image/svg" >
 
-    <link rel="stylesheet" href="style_form.css">
+    <link rel="stylesheet" href="style.css">
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +32,22 @@
 
        <fieldset>
         <legend>¿En qué puedo ayudarte?:</legend>
+
+        <div class="opciones">
         <input type="radio" id="duda" name="consulta" value="duda">
         <label for="duda">Tengo una duda/pregunta</label><br>
+        </div>
+
+        <div class="opciones">
         <input type="radio" id="idea" name="consulta" value="idea">
         <label for="idea">Quiero compartir una idea/sugerencia</label><br>
+        </div>
+
+        <div class="opciones">
         <input type="radio" id="otro" name="consulta" value="otro">
         <label for="otro">Otro</label><br>
+        </div>
+
         </fieldset>
         <br><br>
 
@@ -48,7 +58,7 @@
         </fieldset>
         <br><br>
 
-        <button type="submit">Enviar</button>
+        <button class="btn-enviar" type="submit">Enviar</button>
 
         
          

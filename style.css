@@ -9,13 +9,21 @@
     --color-article2: rgb(166, 214, 218);
     }
 
+* { /*Para eliminar margenes del navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--color-primario);
     font-family: "IBM Plex Serif", serif;
         margin: 0;
         padding: 0;
-    
-}
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
 /* ENCABEZADO: */
 header {
@@ -26,16 +34,12 @@ header {
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 0 20px;           
-    height: 399px;              
+    align-items: center;       
+    height: 399px;    
+    width: 100%;         
+    margin: 0;           
 }
 
-header:hover  {
-    
-    transition: ease;
-}
 
 /* Ocultar elementos del menú hamburguesa: */
 .menu-ham {
@@ -49,9 +53,9 @@ header:hover  {
 /* Estilos para enlaces del menú:*/
 .nav-inicio {
     display: flex;
-    align-items: center;
+    text-align: center;
+    margin: 0 auto;
     padding: 15px 0;
-    position: relative;
     color: bold var(--color-terciario);
     gap: 25px;
 }
@@ -59,8 +63,6 @@ header:hover  {
 .nav-inicio ul {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     gap: 25px;
     }
 
@@ -69,10 +71,6 @@ header:hover  {
      font-weight: bold;
 }
 
-.nav-inicio li {
-    margin: 0;
-   
-}
 
 .nav-inicio a {
     text-decoration: none;
@@ -107,10 +105,6 @@ h1 {
 
 .principal {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    align-items: center;
     text-align: center;
     margin-top: 2px;
     margin-bottom: 50px;
@@ -297,10 +291,10 @@ h1 {
 footer {
     background-color: var(--color-contraste1);
     color: var(--color-primario);
+    display: flex;
+    gap: 50px;
     padding: 20px;
-    text-align: center;
-     display: flex;
-     gap: 50px;
+    width: 100%;
      
 }
 
@@ -334,21 +328,29 @@ footer {
 /*MEDIA QUERIES:*/
 
 /*Para tablets (VERTICAL):*/
- @media screen and (max-width: 768px) {
-  body {
-    font-size: 12px; 
-    width: 100%;          
-    margin: 0;        
-    padding: 0;
-    overflow-x: hidden;
-    }
 
+
+ @media screen and (max-width: 886px) {
+    html, body {
+    overflow-x: hidden;
+    width: 100%;
+    
+}
+  
+body {
+    font-size: 12px; 
+
+}
+
+header, footer {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
   header {
-    width: 1030px;
     font-size: 5px;
-    height: 200px;
-    background-position: 40% 45%;
+    background-position: 40% 45%; 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -369,6 +371,7 @@ footer {
     width: 90px;
     height: 10px;
     cursor: pointer;
+    position: relative;
   
   }
 
@@ -392,16 +395,19 @@ footer {
     display: none;
     flex-direction: column;
     box-shadow: 0px 0px 0px 0px  1000px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20px;
+    left: 0;
   }
 
   .nav-inicio ul {
     flex-direction: column;
     gap: 10px;
-    margin-top: 160px;
+    margin-top: 50px;
     background-color: var(--color-contraste1);
     transition: all 0.3s ease;
     margin-left: 3px;
-    margin-right: 1000px;
+    margin-right: 0px;
     padding: 20px;
   }
 
@@ -419,102 +425,63 @@ footer {
     font-size: 50px;
     border-width: 5px;
     margin-left: 0;
-    height: 110px;
-    width: 199px;
     text-align: center;
-    align-items: center;
-    margin-left: 90px;
     }
 
-    .principal {
-        height: 300px;
-        width: 600px;
-        margin-left: 0px;
-
-    }
-
-     .img-principal {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        margin: 0;
-    }
-
-    .tuto-info {
-        height: 490px;
-        width: 500px;
-        margin-right: 110px;
-        margin-bottom: 5px;
-        padding: 3px;
-    }
-
-    .tuto-img {
-        height: 300px;
-        width: 200px;
-    }
-
-    .recordar {
-        align-items: center;
-        text-align: center;
-        height: 300px ;
-        width: 400px;
-    }
-
-    .video {
-        height: 400px;
-        margin-bottom: 2px;
-       
-    }
-    /*Para acomodar tamaño de video:*/
-    iframe {
-        height: 300px;
-        width: 550px;
-        margin-bottom: 2px;
-        }
-
-    .contacto {
-        height: 300px;
-        padding-top: 10px;
-        overflow: hidden;
-        padding: 0px;
-        display: flex;
-      
-    }
-
-   footer {
-    width: 1030px;
-    margin-left: 0px;
-    margin-right: 0px;
-    gap: 50px;
+    
+   footer, header, .principal, .tuto-info, .guia, .recordar, .video, iframe, .contacto {
+    width: 100%;
+    max-width: 100%;
+      margin: 0 0;
+   
    }
- 
+
+   .video {
+    height: 400px;
+   margin-bottom: 10px;
+   }
+
+   .principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+   }
+
+     .principal img {
+    max-width: 100%;
+    height: auto;
+    display: block;}
 }
 
 /*Para tablets (HORIZONTAL):*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
+    
      body {
-    font-size: 12px; 
+    font-size: 20px;
     width: 100%;          
-    margin: 0;        
-    padding: 0;
-    overflow-x: hidden;
-    }
-
-
-  header {
-    width: 1030px;
-    height: 90px;
-    font-size: 5px;
-    height: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+    flex-direction: column;
+    }
+   
+.principal, .tuto-info, .guia, .recordar, .video, .contacto {
+     margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    
+}
+
+.principal img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
     margin: 0;
-  }
-  
+   }
+
+  /* Menú hamb*/
   .label-ham {
     display:flex;
     flex-direction: column;
@@ -540,9 +507,7 @@ footer {
 .label-ham span:nth-child(2) { top: 13px; }    
 .label-ham span:nth-child(3) { top: 20px; }   
  
-
-
-  .nav-inicio {
+ .nav-inicio {
     display: none;
     flex-direction: column;
     box-shadow: 0px 0px 0px 0px  1000px rgba(0, 0, 0, 0.2);
@@ -551,12 +516,12 @@ footer {
   .nav-inicio ul {
     flex-direction: column;
     gap: 10px;
-    margin-top: 160px;
+    margin-top: 80px;
     background-color: var(--color-contraste1);
     transition: all 0.3s ease;
     margin-left: 3px;
-    margin-right: 1000px;
-    padding: 20px;
+    margin-right: 0px;
+    padding: 30px;
   }
 
   .nav-inicio a:hover {
@@ -564,97 +529,10 @@ footer {
     transition: ease;
   }
 
-  
   .menu-ham:checked ~ .nav-inicio {
     display: block;
   }    
-  
 
-
-  h1 {
-    font-size: 50px;
-    border-width: 5px;
-    margin-left: 0;
-    height: 110px;
-    width: 199px;
-    text-align: center;
-    align-items: center;
-    margin-left: 90px;
-    }
-
-    .principal {
-        height: 300px;
-        width: 100%;
-        margin-left: 0px;
-
-    }
-
-     .img-principal {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        margin: 0;
-    }
-
-    .tuto-info {
-        height: 490px;
-        width: 500px;
-        margin-right: 110px;
-        margin-bottom: 5px;
-        padding: 3px;
-    }
-
-    .tuto-img {
-        height: 300px;
-        width: 200px;
-    }
-
-    .recordar {
-        align-items: center;
-        text-align: center;
-        height: 300px ;
-        width: 400px;
-    }
-
-    .video {
-        height: 400px;
-        margin-bottom: 2px;
-        margin-left: 0px;
-       
-    }
-    /*Para acomodar tamaño de video:*/
-    iframe {
-        height: 300px;
-        width: 550px;
-        margin-bottom: 2px;
-        }
-
-    .contacto {
-        height: 315px;
-        width: 200px;
-        padding-top: 10px;
-        overflow: hidden;
-        padding: 0px;
-        display: flex;
-        margin-left: 30px;
-      
-    }
-
-    .contacto h2 {
-        margin-left: 0px;
-    }
-
-    .contacto h3 {
-        margin-left: 0px;
-    }
-
-   footer {
-    width: 1030px;
-    height: 95px;
-    margin-left: 0px;
-    margin-right: 0px;
-    gap: 50px;
-   }
   
   }
 
@@ -670,7 +548,6 @@ footer {
 
     header {
         width: 100%;
-        height: 150px;
         font-size: 5px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -678,29 +555,28 @@ footer {
         justify-content: space-between;
         align-items: center;
         position: relative;
-        margin: 0;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .recordar {
-        align-items: center;
         text-align: center;
-        height: 300px ;
         width: 100%;
     }
 
     iframe {
         width: 100%;
+        height: 250px;
+    }
+
+    .video {
+        width: 100%;
+        margin-bottom: 100px;
     }
 
      h1 {
-        font-size: 30px;
-        border-width: 5px;
-        margin-left: 0;
-        height: 110px;
         width: 199px;
-        text-align: center;
-        align-items: center;
-        margin-left: 90px;
+        margin: 0 auto;
      }
 
      .tips {
@@ -709,13 +585,23 @@ footer {
      }
 
      .guia {
-        flex-direction: column;
-        align-items: center;
-        width: 500px;
+         width: 100%;
+     }
+
+     .guia table {
+        width: 100%;
+        border-collapse: collapse;
      }
 
      .nav-inicio ul {
         margin-top: 150px;
+     }
+
+     footer {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        gap: 50px;
      }
 
 }
@@ -727,7 +613,6 @@ footer {
     }
     header {
         width: 100%;
-        height: 150px;
         font-size: 5px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -739,14 +624,18 @@ footer {
     }
 
     iframe {
-      height: 200px;
+        width: 100%;
+        height: 250px;
+    }
+
+    .video {
+        width: 100%;
+        margin-bottom: 100px;
     }
 
      h1 {
-        font-size: 30px;
-        border-width: 3px;
-        width: 150px;
-        height: 80px;
+        width: 100%;
+        margin: 0 auto;
      }
 
      .tips {
@@ -757,7 +646,7 @@ footer {
      .guia {
         flex-direction: column;
         align-items: center;
-        width: 500px;
+        width: 100%;
      }
 
      .nav-inicio ul {
@@ -772,14 +661,11 @@ footer {
 
      .img-principal {
         width: 100%;
-        height: 300px;
         object-fit: cover;
         margin: 0;
      }
 
     }
-
-
 
         /*Celulares grandes:*/
         @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -788,7 +674,6 @@ footer {
             }
             header {
                 width: 100%;
-                height: 150px;
                 font-size: 5px;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -843,12 +728,11 @@ footer {
             /*Celulares grandes (HORIZONTAL):*/
             @media screen and (min-width: 769px) and (max-width: 1024px) {
                 body {
-                    font-size: 11px;
+                    font-size: 15px;
                 }
+
                 header {
                     width: 100%;
-                    height: 150px;
-                    font-size: 5px;
                     background-size: cover;
                     background-repeat: no-repeat;
                     display: flex;
@@ -859,29 +743,28 @@ footer {
                 }
 
                 iframe {
-                  height: 200px;
+                  width: 100%;
                 }
 
                  h1 {
                     font-size: 30px;
-                    border-width: 3px;
                     width: 150px;
                     height: 80px;
                  }
 
                  .tips {
+                    width: 100%;
                     flex-direction: column;
-                    align-items: center;
                  }
 
                  .guia {
-                    flex-direction: column;
-                    align-items: center;
-                    width: 500px;
+                     width: 80%;
+                     margin: 0 auto;
                  }
 
                  .nav-inicio ul {
                     margin-top: 150px;
+                    margin-left: 0;
                  }
 
                  .principal h2{
@@ -889,12 +772,86 @@ footer {
                     margin-left: 0px;
                     margin-right: 400px;
                  }
+                 
+                 .principal {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    overflow: hidden;
+                 }
 
                  .img-principal {
                     width: 100%;
-                    height: 300px;
                     object-fit: cover;
                     margin: 0;
                  }
 
                 }
+
+/*Estilos para el formulario de contacto:*/
+fieldset {
+    border: 5px solid var(--color-contraste2);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--color-article2);
+    margin: 0 auto;
+}
+
+
+input, textarea {
+    width: 100%;
+    font-family: "IBM Plex Serif", serif;
+    border: 3px solid var(--color-contraste3);
+    border-radius: 10px;
+    background-color: var(--color-secundario);
+    color: var(--color-contraste2);
+   }
+
+   textarea::placeholder {
+    color: var(--color-contraste2);
+    font-size: 16px;
+    
+   }
+
+   legend {
+    padding: 0 10px;
+    margin-left: 10px;
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    border: 3px solid var(--color-contraste2);
+    }
+
+    .opciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    }
+
+
+   .btn-enviar {
+    display: block;
+
+    font-family: "IBM Plex Serif", serif;
+    border: 4px solid var(--color-contraste3);
+    border-radius: 10px;
+    background-color: var(--color-contraste2);
+    color: var(--color-primario);
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+   .btn-enviar:hover {
+    background-color:var(--color-article);
+    color: var(--color-contraste2);
+    border: 4px solid var(--color-contraste2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+   }
