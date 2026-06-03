@@ -29,6 +29,8 @@ Schneeberger Alison
 
 ![Interfaz inicial de la página de formulario](Imagenes/capturas_diseño/1er_diseño_formulario_2026-05-17.png)
 
+![Diseño en proceso del formulario](Imagenes/capturas_diseño/Diseño_proceso_formu.png) 
+
 
 ## Capturas del diseño final:
 
@@ -42,4 +44,4 @@ Schneeberger Alison
 ![Tabla](Imagenes/capturas_diseño/Diseño_final_tabla_2026-05-17.png)
 
 ## PÁGINA FORMULARIO
-![Formulario](Imagenes/capturas_diseño/Diseño_final_formulario_2026-05-28.png)
+![Formulario](Imagenes/capturas_diseño/1er_diseño_formulario_2026-05-17.png)
