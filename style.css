@@ -138,11 +138,14 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: center;
     border: 10px  solid var(--color-contraste2);
     padding: 20px;
 
 
+}
+
+.tuto-info ul {
+    padding-left: 20px;
 }
 
 .tuto-img {

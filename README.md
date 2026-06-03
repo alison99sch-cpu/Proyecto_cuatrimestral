@@ -38,10 +38,10 @@ Schneeberger Alison
 ![Menú](Imagenes/capturas_diseño/Diseño_final_menú_2026-05-28.png)
 
 ## SECCIÓNES TUTORIAL
-![Secciones del tutorial](Imagenes/capturas_diseño/Diseño_final_tutorial_2026-05-28.png)
+![Secciones del tutorial](Imagenes/capturas_diseño/Diseño_final_tutorial_2026-06-03.png)
 
 ## TABLA
 ![Tabla](Imagenes/capturas_diseño/Diseño_final_tabla_2026-05-17.png)
 
 ## PÁGINA FORMULARIO
-![Formulario](Imagenes/capturas_diseño/1er_diseño_formulario_2026-05-17.png)
+![Formulario](Imagenes/capturas_diseño/Diseño_final_form_2026-06-03.png)
