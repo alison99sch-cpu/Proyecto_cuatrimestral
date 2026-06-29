@@ -1,43 +1,71 @@
-//Funciones:
-//Función para validar formulario:
-const formulario = document.getElementById("form")
-const nombre = document.getElementById("nomb")
-const email = document.getElementById("email")
+// Lista de ideas para decoración:
 
-formulario.addEventListener('submit', (e) => {
-e.preventDefault()
-validarForm()
-})
+const ideasDeco = [
+    "Flores pequeñas", 
+    "Rosas", 
+    "Margaritas",
+    "Mariposas", 
+    "Mariquitas", 
+    "Puntos", 
+    "Líneas", 
+    "Formas geometrícas",
+    "Stickers",
+    "Perlas",
+    "Piedras de strass",
+    "Polvo aurora/perlado",
+    "Polvo de hadas"
+]
 
-function validarForm(){
-    let esValido = true;
-    validarNombre();
-    validarNombre();
+function mostarIdeasDeco() {
+    const lista = document.getElementById("list")
+    lista.innerHTML = ""
 
-}
+    for (let idea of ideasDeco) {
+        const item = document.createElement("li");
+        item.textContent = idea; 
 
-function validarNombre(nombre){
-    if(nombre.value.trim() === " "){
-        esValido = false;
+        lista.appendChild(item); //Agrega el elemento li al ul
 
-    }else if(/\d/.test(nombre.value)){
-        esValido = false;
-    }else{
-        esValido = true;
     }
-
 }
 
-function validarEmail(email){
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
 
-    if(email.value.trim() === " "){
-        esValido = false;
-    }else if(!esEmailValido(emailInput.value)){
-        esValido = false;
+document.getElementById("mostrar").addEventListener("click", () =>
+{
+    const elemento = document.querySelector("#list");
+    if(elemento.style.display === 'none'){
+        elemento.style.display = 'block'
     }else{
-        esValido = true;
+        elemento.style.display =  'none'
     }
-
 }
+);
+
+document.getElementById("mostrar")
+.addEventListener("click", mostarIdeasDeco());
+
+
+
+//Buscador:
+const buscador = [
+    "Esmaltado semipermanente",
+    "Paso 1",
+    "Tips y consejos",
+    "Flores pequeñas"
+]
+
+function buscarEnPagina() {
+    const texto = document.getElementById("buscador").value.toLowerCase();
+
+    const encontrado = buscador.some(busqueda => busqueda.toLowerCase() === texto)
+    const resultado = document.getElementById("resultado")
+
+    if (encontrado) {
+        resultado.textContent = "Se ha encontrado..."
+    } else {
+        resultado.textContent = "Lo sentimos, no se han encontrado resultados :("
+    }
+}
+
+document.getElementById("buscar").addEventListener("click", buscarEnPagina())
+
