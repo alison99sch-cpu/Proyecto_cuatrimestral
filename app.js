@@ -54,7 +54,7 @@ const generosDeco = [
     },
     {
     nombre: "Y2k",
-    descripcion: ": Diseños inspirados en los años 2000 con brillos, mariposas, corazones, estrellas pixeladas y colores vibrantes o neón."
+    descripcion: "Diseños inspirados en los años 2000 con brillos, mariposas, corazones, estrellas pixeladas y colores vibrantes o neón."
     },
     {
     nombre: "Coquette",
@@ -76,7 +76,7 @@ const generosDeco = [
 
 const contInput = document.getElementById("buscador");
 const resultado = document.getElementById("resultado");
-const btnBuscar = document.getElementById("buscar");
+
 
 
 function buscarGen() {
@@ -90,39 +90,37 @@ function buscarGen() {
 
 
     const generosFiltro = generosDeco.filter(genero => 
-        genero.toLowerCase().startsWith(busqueda)
+        genero.nombre.toLowerCase().includes(busqueda)
     );
      
     if (generosFiltro.length === 0) {
-        resultado.innerHTML = 'Lo sentimos, no se encontraron resultados para su busqueda :(';
+        resultado.innerHTML = 'Lo sentimos, no se encontraron resultados para su búsqueda :(';
         return;
     }
 
     generosFiltro.forEach((genero)=> {
         const div = document.createElement("div");
         div.className = "result"
-        div.textContent = genero;
-        div.style.cursor = "pointer";
+        div.textContent = genero.nombre;
+        
 
-        div.addEventListener("click", () => {
-            mostrarDescrip(genero)
-        })
+        div.addEventListener("click", 
+            mostrarDescrip(genero))
+        
         resultado.appendChild(div);
     }
     );
 }
 
-function mostrarDescripcion(genero) {
-    // Limpia y muestra la descripción
+function mostrarDescrip(genero) {
     resultado.innerHTML = `
         <div class="descripcion-activa">
             <h3>${genero.nombre}</h3>
             <p>${genero.descripcion}</p>
-            <button onclick="buscarGen()">Volver a los resultados</button>
         </div>
     `;
 }
 
 
 contInput.addEventListener("input", buscarGen)
-btnBuscar.addEventListener("click", buscarGen)
+
