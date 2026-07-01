@@ -1,51 +1,3 @@
-// Lista de ideas para decoración:
-
-const ideasDeco = [
-    "Flores pequeñas", 
-    "Rosas", 
-    "Margaritas",
-    "Mariposas", 
-    "Mariquitas", 
-    "Puntos", 
-    "Líneas", 
-    "Formas geometrícas",
-    "Stickers",
-    "Perlas",
-    "Piedras de strass",
-    "Polvo aurora/perlado",
-    "Polvo de hadas"
-]
-
-function mostarIdeasDeco() {
-    const lista = document.getElementById("list")
-    lista.innerHTML = ""
-
-    for (let idea of ideasDeco) {
-        const item = document.createElement("li");
-        item.textContent = idea; 
-
-        lista.appendChild(item); //Agrega el elemento li al ul
-
-    }
-}
-
-
-document.getElementById("mostrar").addEventListener("click", () =>
-{
-    const elemento = document.querySelector("#list");
-    if(elemento.style.display === 'none'){
-        elemento.style.display = 'block'
-    }else{
-        elemento.style.display =  'none'
-    }
-}
-);
-
-document.getElementById("mostrar")
-.addEventListener("click", mostarIdeasDeco());
-
-
-
 //Buscador:
 const generosDeco = [
     {
@@ -123,4 +75,92 @@ function mostrarDescrip(genero) {
 
 
 contInput.addEventListener("input", buscarGen)
+
+
+// Lista de ideas para decoración:
+
+const ideasDeco = [
+    "Flores pequeñas", 
+    "Rosas", 
+    "Margaritas",
+    "Mariposas", 
+    "Mariquitas", 
+    "Puntos", 
+    "Líneas", 
+    "Formas geometrícas",
+    "Stickers",
+    "Perlas",
+    "Piedras de strass",
+    "Polvo aurora/perlado",
+    "Polvo de hadas"
+]
+
+function mostarIdeasDeco() {
+    const lista = document.getElementById("list")
+    lista.innerHTML = ""
+
+    for (let idea of ideasDeco) {
+        const item = document.createElement("li");
+        item.textContent = idea; 
+
+        lista.appendChild(item); //Agrega el elemento li al ul
+
+    }
+}
+
+document.getElementById("mostrar").addEventListener("click", () =>
+{
+    const elemento = document.querySelector("#list");
+    if(elemento.style.display === 'none'){
+        elemento.style.display = 'block'
+    }else{
+        elemento.style.display =  'none'
+    }
+}
+);
+
+document.getElementById("mostrar")
+.addEventListener("click", mostarIdeasDeco());
+
+// Lista de ideas personal del usuario:
+const ideas = []
+
+function agregarIdeas() {
+    try {
+        const input = document.querySelector("#ideas").value.trim();
+        if(input === ""){
+            throw new Error("Por favor, ingresa un dato válido!")
+        }
+        if(ideas.includes(input)){
+            throw new Error("Ups! Esa idea ya existe en la lista!")
+        }
+         ideas.push(input)
+         mostrarIdeas()
+
+    } catch(error) {
+         alert(error.message)
+
+    }
+
+}
+
+function mostrarIdeas() {
+    const listaList = document.getElementById("lista")
+    listaList.innerHTML = ""
+
+    for(let idea of ideas) {
+        const li = document.createElement("li")
+        li.textContent = idea
+        listaList.appendChild(li)
+
+    }
+    document.getElementById("ideas").value = ""
+}
+
+document.getElementById("agregar").addEventListener("click", agregarIdeas)
+document.getElementById("ideas").addEventListener("keypress", event => {
+    if(event.key === "Enter") {
+        agregarIdeas();
+    }
+})
 
