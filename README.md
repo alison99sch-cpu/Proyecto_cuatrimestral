@@ -50,12 +50,46 @@ Estas son las tecnologías que he utilizado para la realización del proyecto:
 ## Funcionalidades implementadas
 - Funcionalidad 1: Buscador de información sobre géneros de estilo y decoración en uñas.
 - Funcionalidad 2: Lista desplegable de ideas para decorar uñas.
-- Funcionalidad 3: Lista personal del ususario para que pueda agregar sus propias ideas de decoración.
-- Funcionalidad 4: Validación de todos los elementos del formulario (nombre, gmail, radiobuttons y textarea).
+- Funcionalidad 3: Lista personal del usuario para que pueda agregar sus propias ideas de decoración.
+- Funcionalidad 4: Validación de todos los elementos del formulario (nombre, gmail, radio buttons y textarea).
+- Funcionalidad 5: Galería de imagenes con tendencias en uñas.
 
+### Buscador
+En la siguiente imagen se puede observar el buscador de información sobre géneros de estilo y decoración en uñas.
+A medida que el ususario va escribiendo el nombre del género, abajo de la barra de búsqueda le aparecera la información requerida. En caso de que el género buscado no se encuentre o se ingrese cualquier dato invalido, aparecera el siguiente mensaje: *"Lo sentimos, no se encontraron resultados para su búsqueda"*.
+
+![Buscador](Imagenes/capturas_diseño/buscador.png)
+
+### Lista desplegable
+Al hacer *"click"* en el botón, se despliega una lista de ideas para decoración de uñas.
+
+![Lista de ideas](Imagenes/capturas_diseño/lista.png)
+
+### Lista personal del usuario
+A diferencia de la anterior, esta lista es exclusivamente para el usuario. Su propósito es que pueda anotar sus propias ideas de decoración. Al apretar el botón de *"Agregar ideas"* automáticamente se generará una lista.
+
+Si se ingresa una idea ya escrita aparecera un *alert* indicandolo, y si se intenta ingresar texto vacío por error, nuevamente aparecera otro *alert* informando que ese dato es invalido.
+
+![Lista personal](Imagenes/capturas_diseño/lista_usuario.png)
+
+### Validación del formulario
+Como puede observarse en la siguiente imagen, si el usuario no ingresa datos válidos aparecerán mensajes de error y se evitará el envío del formulario. Caso contrario, se mostrará un mensaje de éxito.
+*Puntos a tener en cuenta:*
+- El usuario no puede ingresar un nombre menor a 3 caracteres.
+- El formato del gmail debe ser el correcto (con "**@**" y "**.**").
+- Es obligatorio que un radio button este seleccionado.
+- Debe escribir su inquietud o sugerencia.
+
+![Validación](Imagenes/capturas_diseño/valid.png)
+
+
+### Galería de imagenes
+En esta galería el usuario puede observar algunas de las últimas tendencias en el diseño de uñas.
+![Galeria](Imagenes/capturas_diseño/galeria.png)
 
 ## Descripción final del proyecto
 Este proyecto ha sido creado no solo con la intención de aprender a programar con los tres lenguajes utilizados (HTML, CSS y JavaScript), sino también con el deseo de proporcionar un espacio dedicado a los amantes o interesados en el mundo de la manicuría. 
+
 El diseño de la página y la información que presenta estan cuidadosamente pensados para informar e inspirar. El usuario puede aprender sobre el esmaltado permanente, obtener consejos y tips útiles, además de ver ideas y crear las suyas propias, entre otras utilidades. Otra característica no menos importante es el formulario con el que pueden contactarse por cualquier duda o sugerencia.
 
 ## Autor

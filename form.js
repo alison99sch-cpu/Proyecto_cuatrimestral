@@ -39,7 +39,7 @@ formulario.addEventListener("submit", e=> {
     if(ingreso) {
         parr.innerHTML = warnings
     }else{
-        parr.innerHTML = `Enviado con exito! ✨`
+        parr.innerHTML = `Enviado con éxito! ✨`
     }
 }
 
