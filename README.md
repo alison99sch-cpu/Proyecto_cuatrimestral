@@ -14,11 +14,6 @@ además de brindar consejos para un mejor resultado. Es un sitio pensado para re
 - Contiene un enlace a un formulario de contacto para dudas, consultas o ideas y sugerencias.
 - Además, presenta enlaces a mis redes sociales (instagram y canal de youtube).
 
-
-## Autor
-Schneeberger Alison
-
-
 ## Capturas del proceso de diseño:
 
 ![Diseño piloto del menú](Imagenes/capturas_diseño/1er_diseño_menú_2026-05-15.png)
@@ -45,3 +40,23 @@ Schneeberger Alison
 
 ## PÁGINA FORMULARIO
 ![Formulario](Imagenes/capturas_diseño/Diseño_final_form_2026-06-03.png)
+
+## Tecnologías Utilizadas
+Estas son las tecnologías que he utilizado para la realización del proyecto:
+- **HTML:** Implementado para dar estructura a la página.
+- **CSS:** Utilizado para generar un diseño atractivo, con animaciones y colores interesantes.
+- **JavaScript:** Gracias a este lenguaje, he podido agregar interactividad y lógica al proyecto.
+
+## Funcionalidades implementadas
+- Funcionalidad 1: Buscador de información sobre géneros de estilo y decoración en uñas.
+- Funcionalidad 2: Lista desplegable de ideas para decorar uñas.
+- Funcionalidad 3: Lista personal del ususario para que pueda agregar sus propias ideas de decoración.
+- Funcionalidad 4: Validación de todos los elementos del formulario (nombre, gmail, radiobuttons y textarea).
+
+
+## Descripción final del proyecto
+Este proyecto ha sido creado no solo con la intención de aprender a programar con los tres lenguajes utilizados (HTML, CSS y JavaScript), sino también con el deseo de proporcionar un espacio dedicado a los amantes o interesados en el mundo de la manicuría. 
+El diseño de la página y la información que presenta estan cuidadosamente pensados para informar e inspirar. El usuario puede aprender sobre el esmaltado permanente, obtener consejos y tips útiles, además de ver ideas y crear las suyas propias, entre otras utilidades. Otra característica no menos importante es el formulario con el que pueden contactarse por cualquier duda o sugerencia.
+
+## Autor
+Schneeberger Alison

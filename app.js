@@ -164,3 +164,28 @@ document.getElementById("ideas").addEventListener("keypress", event => {
     }
 })
 
+//Carrousel de imagenes:
+const imagenes = document.getElementById("imagenes")
+const prevBtn = document.getElementById("prev")
+const nextBtn = document.getElementById("next")
+
+
+let indice = 0;
+const totalImagenes = 5
+
+function actualizarCarrusel(){
+    imagenes.style.transform = `translateX(-${indice * 100}%)`
+    }
+
+prevBtn.addEventListener("click", () =>{
+    indice = (indice - 1) % totalImagenes;
+    actualizarCarrusel();
+});
+
+nextBtn.addEventListener("click", () =>{
+    indice = (indice + 1) % totalImagenes;
+    actualizarCarrusel();
+});
+
+actualizarCarrusel();
+

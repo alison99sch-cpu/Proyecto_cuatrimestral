@@ -881,3 +881,39 @@ input:not([type="radio"]), textarea {
     font-size: 20px;
 }
 
+#carrusel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#contenedor {
+    position: relative;
+}
+
+#imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+#imagenes img {
+   height: 500px;
+   min-width: 100%;
+   object-fit: cover;
+}
+
+#prev, #next {
+    position: absolute;
+    font-size: 30px;
+
+}
+
+#prev {left: 15px;}
+#next {right: 15px;}
+
+.tendencias {
+    text-align: center;
+    margin: 0px auto;
+}
